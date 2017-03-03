@@ -34,7 +34,7 @@ static int init_plugins() {
 		if(PLUGINS_COUNT >= MAX_PLUGINS_COUNT) {
 			break;
 		}
-		sprintf(PLUGINS[PLUGINS_COUNT], "%s/%s", PLUGINS_FOLDER_NAME, de->d_name);
+		snprintf(PLUGINS[PLUGINS_COUNT], FILENAME_MAX, "%s/%s", PLUGINS_FOLDER_NAME, de->d_name);
 		status = stat(PLUGINS[PLUGINS_COUNT], &st);
 		if(S_ISREG(st.st_mode)) {
 			PLUGINS_COUNT++;
