@@ -12,10 +12,10 @@ $(TARGET): $(OBJS)
 	$(LD) --shared $(OBJS) -o $(TARGET)
 
 %.o: %.c
-	$(CC) -DPIC -c $^
+	$(CC) -fPIC -c $^
 
 %.o: %.cpp
-	$(CXX) -DPIC -c $^
+	$(CXX) -fPIC -c $^
 
 clean:
 	rm -rf $(TARGET) $(OBJS)

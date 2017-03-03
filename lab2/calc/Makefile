@@ -13,7 +13,7 @@ $(TARGET): $(OBJS)
 
 %.o: %.c
 	$(CC) -c $^
-	
+
 %.o: %.cpp
 	$(CXX) -c $^
 
